@@ -1,0 +1,104 @@
+#+OPTIONS: toc:nil
+#+Title: Introduction to AI/ML
+#+Author: Name
+#+Email: Email
+#+STARTUP: showall
+#+REVEAL_TRANS: linear
+#+REVEAL_THEME: white
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_VERSION: 4
+#+REVEAL_DEFAULT_SLIDE_BACKGROUND: 
+#+REVEAL_DEFAULT_SLIDE_BACKGROUND_POSITION: right 10% bottom 10%
+#+REVEAL_DEFAULT_SLIDE_BACKGROUND_SIZE: 200px
+
+* What is Machine Learning?
+  * Identifying patterns when given input + output*
+  * Using identified patterns to predict output given unseen input
+* Types of Machine learning
+  * Supervised learning - Outputs are given
+    * Trying to identify pattern for computing output
+    * Regression/Classification
+  * Unsupervised learning - Outputs are not given
+    * Identifying how to meaningfully divide data instances
+    * Clustering
+* What are inputs/outputs?
+  * A record is one instance of data i.e row within a CSV
+  * Each record will have field that will the target value.
+    * Example: Price of house
+  * Fields other than target value will be potential inputs.
+    * Example: No of rooms, Carpet Area, Locality
+** Input types
+  1. Quantitative
+  2. Categorical
+  3. Ordinal
+** Output types
+  1. Quantitative (Regression)
+  2. Categorical (Classification)
+
+* Machine Learning Loop
+#+BEGIN_SRC dot :file ml_loop.png :cmdline -Kdot -Tpng
+  digraph {
+   beautify=true;
+   understand [label="Understand domain"]; 
+   feature [label="Feature Engineering"];
+   modeling [label="Training models"];
+   interpret [label="Interpret results"];
+   consolidate [label="Deploy models"];
+
+   understand -> feature -> modeling -> interpret -> consolidate;
+   consolidate -> understand;
+  }
+#+END_SRC
+
+#+RESULTS:
+[[file:ml_loop.png]]
+
+** Understanding domain
+  * Given a problem statement, understand how inputs might affect the output
+  * Check if given data is enough for modeling or you need more input features
+  * For example: Is absence of locality critical for housing price estimator?
+  * Define how you would evaluate the performance of system
+
+** Feature Engineering/Data processing
+  * Handle missing inputs/outputs.
+  * Handle outliers.
+  * Handle redundant features.
+  * Apply functions of features.
+
+** Model training
+  * Create separate train, test and validate datasets.
+  * Perform training and testing until you achieve acceptable levels of accuracy or other applicable measures.
+  * Perform final test against validation dataset.
+
+** Interpret results
+  * Use evaluation methods to identify how well the model does against validation set.
+  * If multiple models have been trained, reason which one is better than the other.
+
+** Deploy models
+  * Deploy in production for predictions.
+
+* Supervised learning algorithms
+  * Classification
+    * To classify input into two or more categories
+    * Example: Images to alphabets(categories)
+  * Regression
+    * Calculate numerical output given the inputs
+    * Example: Calculate price of house
+
+** Classification algorithms
+   1. Logistic Regression
+   2. Decision Trees
+   3. Support Vector Machines
+   4. K-Nearest Neighbors
+   5. Artificial Neural Networks
+
+** Regression algorithms
+   1. Linear Regression
+   2. Support Vector Regression
+
+* How to use and when to use
+  :PROPERTIES:
+  :reveal-font-size: 10px
+  :END:
+  #+ATTR_HTML: :height 100%
+  [[./ml_map.png]]
