@@ -1,0 +1,45 @@
+:root {
+    --r-main-font: 'Nunito Sans';
+    --r-heading-font: 'Nunito Sans';
+    --r-heading-text-transform: none;
+}
+
+.slides {
+    display: flex;
+    justify-content: space-around;
+}
+
+.reveal section.present {
+    display: block;
+    max-width: var(--slide-width);
+    height: var(--slide-height);
+}
+
+section > h2:first-of-type {
+    padding: 40px;
+    background-image: url("./logo.png");
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    background-size: 200px;
+    background-color: #eeeeee;
+    font-size: 40px;
+    text-align: left;
+}
+
+section > h3:first-of-type {
+    padding: 40px;
+    background-image: url("./logo.png");
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    background-size: 200px;
+    background-color: #eeeeee;
+    font-size: 40px;
+    text-align: left;
+}
+
+.author-line {
+    position: absolute;
+    text-align: left;
+    bottom: 10%;
+    margin: 10px;
+}

@@ -1,15 +1,14 @@
-#+OPTIONS: toc:nil
+#+OPTIONS: toc:nil num:nil
 #+Title: Introduction to AI/ML
 #+Author: Name
 #+Email: Email
+#+DATE: Date
 #+STARTUP: showall
 #+REVEAL_TRANS: linear
 #+REVEAL_THEME: white
+#+INCLUDE: "./takeoff/customizations.org"
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
 #+REVEAL_VERSION: 4
-#+REVEAL_DEFAULT_SLIDE_BACKGROUND: 
-#+REVEAL_DEFAULT_SLIDE_BACKGROUND_POSITION: right 10% bottom 10%
-#+REVEAL_DEFAULT_SLIDE_BACKGROUND_SIZE: 200px
 
 * What is Machine Learning?
   * Identifying patterns when given input + output*

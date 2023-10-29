@@ -1,0 +1,10 @@
+#+REVEAL_EXTRA_CSS: ./takeoff/style.css
+#+REVEAL_TITLE_SLIDE: <div style="display: flex; justify-content: space-between; align-items: center; margin: 10px;"><img src="./takeoff/logo.png" width="300" /><div>%d</div></div><div class="author-line"><h1>%t</h1><h2>%A %a</h2></div>
+
+#+BEGIN_COMMENT
+#+REVEAL_DEFAULT_SLIDE_BACKGROUND: ./takeoff/logo.png
+#+REVEAL_DEFAULT_SLIDE_BACKGROUND_POSITION: right 10% bottom 10%
+#+REVEAL_DEFAULT_SLIDE_BACKGROUND_SIZE: 200px
+#+END_COMMENT
+
+#+REVEAL_EXTRA_OPTIONS: center: false, disableLayout: false, margin: 0
